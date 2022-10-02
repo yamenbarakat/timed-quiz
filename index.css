@@ -52,6 +52,7 @@ h1 {
 }
 
 .answers-container div {
+  display: flex;
   margin-top: 15px;
 }
 
