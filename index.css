@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #b68b07;
+  --sub-color: #e4dfdf;
+  --back-color: #202020;
+  --back-sub-color: #282828;
+}
+
+body {
+  background: #7b5d02; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #181818,
+    #7b5d02
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #181818,
+    #7b5d02
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.quiz-app {
+  width: 80%;
+  margin: 50px auto;
+  justify-content: center;
+  background-color: var(--back-color);
+  color: var(--sub-color);
+  padding: 50px;
+  border-radius: 6px;
+}
+
+h1 {
+  color: var(--main-color);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* qa section */
+.qa {
+  padding: 30px;
+  background-color: var(--back-sub-color);
+  border-radius: 6px;
+}
+
+.question h2 {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.answers-container div {
+  margin-top: 15px;
+}
+
+.answers-container input {
+  display: inline-block;
+  height: 100%;
+}
+
+.answers-container label {
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+}
+
+.answers-container [checked] + label {
+  color: var(--main-color);
+}
+
+.results .green {
+  color: green;
+}
+
+.results .blue {
+  color: blue;
+}
+
+.results .red {
+  color: red;
+}
+
+/* buttons section */
+
+.submit,
+.try {
+  background-color: var(--main-color);
+  color: var(--back-sub-color);
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.submit:hover,
+.try:hover {
+  background-color: #d7ba18;
+}
+
+/* bullets and time section */
+
+.bullets-timer {
+  display: flex;
+  margin-top: 10px;
+  background-color: var(--back-sub-color);
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.bullets {
+  flex: 1;
+}
+
+.bullets span {
+  background-color: var(--sub-color);
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.bullets .on {
+  background-color: var(--main-color);
+}
+
+/* start media query */
+
+@media (max-width: 530px) {
+  .quiz-app {
+    width: 96%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .question h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .answers-container label {
+    line-height: 22px;
+  }
+}
+
+/* frameWork */
+
+.hide {
+  display: none;
+}
